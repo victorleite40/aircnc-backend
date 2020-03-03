@@ -1,2 +1,2 @@
-# aircnc-backend
-Aplicação Semana Omnistack 9.0 - Aircnc
+# Aircnc Backend em NodeJS
+Aplicação Semana Omnistack 9.0
