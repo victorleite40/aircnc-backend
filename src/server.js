@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require('express'); // Importa a dependencia 
 const mongoose = require('mongoose'); // Importa a dependencia 
 const cors = require('cors'); // Importa a dependencia 
+const path = require('path'); // 
 
 const routes = require('./routes'); // Importa o arquivo
 
@@ -21,6 +22,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
 app.use(cors()); // permite que qualquer endereço de app acesse a API
 app.use(express.json()); // Define que deve-se usar formato json
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads'))); // Usado para retornar arquivos
 app.use(routes); // Sempre dps do comando interior
 
 /* 
